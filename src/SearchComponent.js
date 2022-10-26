@@ -1,15 +1,39 @@
 import styled from 'styled-components';
 import searchIcon from './assets/icon-search.svg';
+import axios from 'axios';
 
-function SearchComponent({IsLight, setIsLight}){
+
+function SearchComponent({IsLight, setIsLight, name, setName, setUser}){
+    
+
+    const fetchData = async() =>{
+        try {
+            const {data} = await axios.get(`https://api.github.com/users/${name}`);
+            setUser(data);
+        } catch (error) {
+            
+        };
+    };
+    const searchName = (event) =>{
+        setName(event.target.value);
+    };
+
+    const enter = (event) =>{
+        if(event.code === 'Enter'){
+            fetchData();
+        }
+    }
+
+
     return(
-        <SearchInputContainer IsLight={IsLight} setIsLight={setIsLight}>
+        <SearchInputContainer IsLight={IsLight} setIsLight={setIsLight} name={name} setName={setName}>
             <img src={searchIcon} alt='search-icon'/>
-            <SearchInput IsLight={IsLight} setIsLight={setIsLight} placeholder='Search GitHub username…'></SearchInput>
-            <SearchButton>Search</SearchButton>
+            <SearchInput onKeyDown={enter} onChange={searchName} IsLight={IsLight} setIsLight={setIsLight} placeholder='Search GitHub username…'></SearchInput>
+            <SearchButton onClick={fetchData} >Search</SearchButton>
         </SearchInputContainer>
     )
 }
+
 
 const SearchButton = styled.button`
     font-family: 'Space Mono';
@@ -27,6 +51,7 @@ const SearchButton = styled.button`
     padding-right: 14px;
     border: 0;
     margin-right: 7px;
+    cursor: pointer;
 `
 
 const SearchInputContainer = styled.div`
