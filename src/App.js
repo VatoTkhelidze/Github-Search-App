@@ -19,7 +19,7 @@ function App() {
       { user && <ProfileComponent user={user} IsLight={IsLight} setIsLight={setIsLight} name={name} setName={setName} />}
     </Container>
   );
-}
+};
 
 
 const Container = styled.div `
