@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Github-Search-App/static/css/main.0eef9144.css",
-    "main.js": "/Github-Search-App/static/js/main.28d7a2db.js",
-    "index.html": "/Github-Search-App/index.html",
-    "static/media/icon-search.svg": "/Github-Search-App/static/media/icon-search.0cc0c98424cc75d5e1dfbb9e3abb6785.svg",
-    "main.0eef9144.css.map": "/Github-Search-App/static/css/main.0eef9144.css.map",
-    "main.28d7a2db.js.map": "/Github-Search-App/static/js/main.28d7a2db.js.map"
+    "main.css": "/github-search-app/static/css/main.0eef9144.css",
+    "main.js": "/github-search-app/static/js/main.b9e7e6f4.js",
+    "index.html": "/github-search-app/index.html",
+    "static/media/icon-search.svg": "/github-search-app/static/media/icon-search.0cc0c98424cc75d5e1dfbb9e3abb6785.svg",
+    "main.0eef9144.css.map": "/github-search-app/static/css/main.0eef9144.css.map",
+    "main.b9e7e6f4.js.map": "/github-search-app/static/js/main.b9e7e6f4.js.map"
   },
   "entrypoints": [
     "static/css/main.0eef9144.css",
-    "static/js/main.28d7a2db.js"
+    "static/js/main.b9e7e6f4.js"
   ]
 }
